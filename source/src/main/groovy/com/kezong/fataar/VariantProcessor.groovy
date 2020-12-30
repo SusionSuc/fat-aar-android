@@ -419,6 +419,9 @@ class VariantProcessor {
                     from outputDir
                     into javacDir
                     exclude 'META-INF/'
+                    if (mPluginConfig.excludeInnerAarManifest) {
+                        exclude 'AndroidManifest.xml'
+                    }
                 }
 
                 mProject.copy {

@@ -50,7 +50,7 @@ class FatAarPlugin implements Plugin<Project> {
         rTransform = new RClassesTransform(project)
         // register in project.afterEvaluate is invalid.
         project.android.registerTransform(rTransform)
-        project.android..registerTransform(new BuildClassFilterTransform(project, pluginExtension))
+        project.android.registerTransform(new BuildClassFilterTransform(project, pluginExtension))
     }
 
     private void doAfterEvaluate() {

@@ -53,14 +53,20 @@ class FatAarExtension {
      * */
     public List<String> excludeClasses = new ArrayList<>()
 
-
     /**
      * 特殊abi兼容
      *
      * 将v5的so替换为v7的so
      *
-     * 为true时默认启用abiFilter=v7
+     * abiFilter必须为[v5,v7]
      * */
     public boolean replaceV5WithV7So = false
+
+
+    /**
+     * exclude掉aar中内嵌aar的Manifest文件
+     * */
+    public boolean excludeInnerAarManifest = false
+
 
 }
