@@ -2,9 +2,7 @@ fork from : https://github.com/kezong/fat-aar-android
 
 额外支持 :
 
-1. 剔除子aar异常定义在`values.xml`中的`<declare-style/>`
-
->比如子aar定义的`<declare-style/>`和support库冲突了
+1. 剔除子aar异常定义在`values.xml`中的`<declare-style/>` (比如子aar定义的`<declare-style/>`和support库冲突了)
 
 2. 剔除子aar重复定义的`<application/>` 中的`attr`
 
@@ -15,5 +13,7 @@ fork from : https://github.com/kezong/fat-aar-android
 5. 支持abiFilter, 保证打出的fataar只有一个jni目录
 
 6. 支持重复的`<declare-style/>`分离，避免fataar打包失败
+
+7. 支持剔除依赖中内打aar的Manifest(比如alipay这种)
 
 
